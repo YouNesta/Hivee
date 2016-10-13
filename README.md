@@ -23,6 +23,7 @@ Installation
 
 * Download and Install [Vagrant][1]
 * Download and Install [VirtualBox][2]
+* Install Font for powerline [Powerline Font Repository][4]
 * Clone the Hivee Box[GitHub Repository][3]
 ```bash
 git clone https://github.com/YounesBoulkaddid/Hivee;
@@ -111,3 +112,4 @@ Or if you want "www" to work as well, do:
  [1]: https://www.vagrantup.com/downloads.html
  [2]: https://www.virtualbox.org/wiki/Downloads
  [3]: https://github.com/YounesBoulkaddid/Hivee
+ [4]: https://github.com/Lokaltog/powerline-fonts
