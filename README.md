@@ -7,6 +7,8 @@ Installation
 ### Configuration
 
 - Ubuntu 14.04 
+-Nvm
+
 - Node 
 - Git
 - Npm
