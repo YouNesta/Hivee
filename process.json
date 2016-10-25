@@ -1,0 +1,18 @@
+{
+    "apps": [
+        {
+            "name": "api",
+            "cwd": "/var/www/apiHivee",
+	    "script": "bin/www",
+            "watch": true,
+            "exec_interpreter": "~/.nvm/versions/node/v6.8.1/bin/node"
+        },
+        {
+            "name": "blog",
+            "cwd": "/var/www/Channel/blogHivee",
+            "script": "bin/www",
+            "watch": true,
+            "exec_interpreter": "~/.nvm/versions/node/v4.6.0/bin/node"
+        }
+    ]
+}
