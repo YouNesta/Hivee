@@ -1,3 +1,9 @@
-.vagrant/
+#IDE File
+.idea/
+
+#Mac OSX index file
 .DS_Store
+
+#Vagrant folder and box
+.vagrant/
 *.box
