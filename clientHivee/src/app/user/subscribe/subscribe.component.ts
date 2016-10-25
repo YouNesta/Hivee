@@ -43,10 +43,9 @@ export class SubscribeComponent implements OnInit {
     this.auth.subscribe(newUser, this.model.password)
       .subscribe(
         res => {
-          console.log(res)
           if (res.success) {
             localStorage.setItem('auth_token', res.auth_token);
-            var user = JSON.stringify(res.user)
+            var user = JSON.stringify(res.user);
             localStorage.setItem('user', user);
             this.router.navigate(['user'])
           }
