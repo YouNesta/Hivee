@@ -7,3 +7,6 @@
 [submodule "blog"]
 	path = blog
 	url = https://github.com/YounesBoulkaddid/blogHivee
+[submodule "admin"]
+	path = admin
+	url = https://github.com/YounesBoulkaddid/adminHivee.git
