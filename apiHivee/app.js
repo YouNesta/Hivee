@@ -8,6 +8,7 @@ var mongoose = require('mongoose')
 
 var routes = require('./routes/index');
 var user = require('./routes/user');
+var housing = require('./routes/housing');
 var config = require('./config/config');
 
 var app = express();
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/user', user);
+app.use('/housing', housing);
 
 // Create the database connection
 mongoose.connect(config.database);

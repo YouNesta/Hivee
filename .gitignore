@@ -7,3 +7,4 @@
 #Vagrant folder and box
 .vagrant/
 *.box
+.gitconfig

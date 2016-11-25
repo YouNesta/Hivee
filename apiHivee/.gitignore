@@ -4,6 +4,16 @@ logs
 *.log
 npm-debug.log*
 
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+*.launch
+.settings/
+
+
 # Runtime data
 pids
 *.pid
