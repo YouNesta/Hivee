@@ -4,3 +4,6 @@
 [submodule "api"]
 	path = api
 	url = https://github.com/YounesBoulkaddid/apiHivee
+[submodule "blog"]
+	path = blog
+	url = https://github.com/YounesBoulkaddid/blogHivee
