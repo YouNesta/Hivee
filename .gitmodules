@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/YounesBoulkaddid/clientHivee
+[submodule "api"]
+	path = api
+	url = https://github.com/YounesBoulkaddid/apiHivee
