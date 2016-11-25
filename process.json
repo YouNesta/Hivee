@@ -2,14 +2,14 @@
     "apps": [
         {
             "name": "api",
-            "cwd": "/var/www/apiHivee",
+            "cwd": "/var/www/api",
 	    "script": "bin/www",
             "watch": true,
             "exec_interpreter": "~/.nvm/versions/node/v6.8.1/bin/node"
         },
         {
             "name": "blog",
-            "cwd": "/var/www/Channel/blogHivee",
+            "cwd": "/var/www/Channel/blog",
             "script": "bin/www",
             "watch": true,
             "exec_interpreter": "~/.nvm/versions/node/v4.6.0/bin/node"
