@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
   }
 
   isLoggedIn(){
-    console.log(this.auth.isLoggedIn())
     return this.auth.isLoggedIn() == true;
 
   }

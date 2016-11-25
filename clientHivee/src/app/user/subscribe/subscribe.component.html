@@ -6,12 +6,6 @@
   </md-toolbar>
   <md-card-content>
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-
-
-      <md-input #emailInput type="text" [(ngModel)]="model.email"  minlength="5" maxlength="40" placeholder="Email" name="email" id="email" required>
-        <md-hint align="end">{{emailInput.characterCount}} / 40</md-hint>
-      </md-input>
-
       <table>
         <tr>
           <td>
@@ -27,12 +21,49 @@
         </tr>
       </table>
 
-      <md-input #phoneInput type="text" [(ngModel)]="model.phone"  minlength="5" maxlength="40" name="phone" id="phone" required>
+      <table>
+        <tr>
+          <td>
+            <md-input #emailInput type="text" [(ngModel)]="model.email"  minlength="5" maxlength="40" placeholder="Email" name="email" id="email" required>
+              <md-hint align="end">{{emailInput.characterCount}} / 40</md-hint>
+            </md-input>
+          </td>
+          <td>
+            <md-input #phoneInput type="text" [(ngModel)]="model.phone"  minlength="5" maxlength="40" name="phone" id="phone" required>
+              <md-placeholder>
+                <i class="material-icons app-input-icon">android</i> Phone
+              </md-placeholder>
+              <md-hint align="end">{{phoneInput.characterCount}} / 10</md-hint>
+            </md-input>
+          </td>
+        </tr>
+      </table>
+
+      <md-input #cityInput type="text" [(ngModel)]="model.city" name="city" id="city" required>
         <md-placeholder>
-          <i class="material-icons app-input-icon">android</i> Phone
+          City
         </md-placeholder>
-        <md-hint align="end">{{phoneInput.characterCount}} / 10</md-hint>
       </md-input>
+
+      <table>
+        <tr>
+          <td>
+            <md-input #birthdateInput type="date" [(ngModel)]="model.birthdate"  name="birthdate" id="birthdate" required>
+            </md-input>
+          </td>
+          <td>
+            <select  #sexeSelect  name="sexe" id="sexe" [(ngModel)]="model.sexe" required>
+              <option *ngFor="let sexe of sexes" [value]="sexe">
+                {{sexe}}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <textarea name="description" id="description"  [(ngModel)]="model.description"></textarea>
+
+
 
       <table>
         <tr>

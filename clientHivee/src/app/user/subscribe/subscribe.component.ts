@@ -13,18 +13,38 @@ export class SubscribeComponent implements OnInit {
 
   @ViewChild('emailInput') emailInput: MdInput;
 
-  public model = {
-    email: "",
-    firstName: "",
-    lastName: "",
-    phone: "",
-    password: "",
-    confirmedPassword: ""
+  public model : {
+    firstName: string,
+    lastName: string,
+    email: string,
+    phone: string,
+    birthdate: Date,
+    sexe: string,
+    password: string,
+    confirmedPassword: string,
+    description: string,
+    city: string
   };
+
+  public sexes: Array<string>;
+
   submitted = false;
 
   constructor(private auth: AuthService, private router: Router) {
+    this.model = {
+      firstName : "",
+      lastName : "",
+      email : "",
+      phone : "",
+      birthdate : new Date(),
+      sexe : "",
+      password : "",
+      confirmedPassword : "",
+      description : "",
+      city : ""
+    };
 
+    this.sexes = ["Male", "Femelle", "Autre"]
   }
 
   ngOnInit() {
@@ -38,7 +58,18 @@ export class SubscribeComponent implements OnInit {
   }
 
   subscribe(){
-    var newUser = new User( this.model.email, this.model.firstName, this.model.lastName, this.model.phone);
+
+    var newUser = new User(
+      this.model.email,
+      this.model.firstName,
+      this.model.lastName,
+      this.model.phone,
+      this.model.birthdate,
+      this.model.sexe,
+      this.model.password,
+      this.model.description,
+      this.model.city
+    );
 
     this.auth.subscribe(newUser, this.model.password)
       .subscribe(
