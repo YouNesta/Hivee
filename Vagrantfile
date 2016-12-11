@@ -7,10 +7,13 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.33.10"
     config.vm.hostname = "Hivee"
 
+    config.vm.synced_folder '.', '/vagrant', disabled: true
     config.vm.synced_folder "./admin", "/var/www/admin"
     config.vm.synced_folder "./api", "/var/www/api"
     config.vm.synced_folder "./blog", "/var/www/blog"
     config.vm.synced_folder "./client", "/var/www/client"
+
+    config.vm.provision "file", source: './process.json', destination: '/var/www/process.json'
 
     config.ssh.forward_agent = true
     config.ssh.username = 'vagrant'
